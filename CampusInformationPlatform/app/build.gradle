@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.bjtu.campus_information_platform"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'cn.bingoogolapple:bga-refreshlayout-androidx:2.0.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7'
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+    implementation 'com.android.support:recyclerview-v7'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+    implementation 'com.royrodriguez:transitionbutton:0.2.0'    // 登录加载按钮
+    implementation(name: 'CodeInput-1.1', ext: 'aar')
+    implementation project(path: ':lib-todaystepcounter')
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation project(path: ':lib-todaystepcounter')
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.github.apl-devs:appintro:v4.2.2'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    //implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+    implementation 'com.github.searchy2:CustomAlertViewDialogue:2.6.1'
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+}

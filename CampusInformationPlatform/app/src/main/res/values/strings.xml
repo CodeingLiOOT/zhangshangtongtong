@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">掌上通通</string>
+    <string name="home">教室</string>
+    <string name="classList">课程表</string>
+    <string name="hole">树洞</string>
+    <string name="sport">运动</string>
+    <string name="profile">个人</string>
+</resources>
